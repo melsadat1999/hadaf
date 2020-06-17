@@ -42,7 +42,15 @@
 }
 
 
-
+.avatar{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 50%;
+}
 
 .card:hover .additional {
   width: 100%;
