@@ -5,10 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { JwtInterceptor } from './shared/services/jwt-interceptor.service';
-import { JwtModule } from '@auth0/angular-jwt';
-export function tokenGetter() {
-  return 'c61459DestZmb-E2ZIN2DoxlLa0qebZ60TFP';
-}
+
 
 
 @NgModule({
@@ -18,12 +15,7 @@ export function tokenGetter() {
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
-    JwtModule.forRoot({
-      config: {
-        tokenGetter: tokenGetter,
-      }
-    }),
+    HttpClientModule
   ],
   providers: [
     {
