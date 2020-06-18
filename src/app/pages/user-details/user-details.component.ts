@@ -16,6 +16,7 @@ export class UserDetailsComponent implements OnInit {
   loader: boolean;
   editMode: boolean;
   userForm: FormGroup;
+ 
   constructor(private http: HttpService, activatedRoute: ActivatedRoute, formBuilder: FormBuilder,private router:Router) {
     activatedRoute.params.subscribe(param => {
       this.userId = param.id
