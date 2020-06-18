@@ -1,1 +1,6 @@
-<user *ngFor="let user of users"  [user]="user"></user>
+<loader *ngIf="loader"></loader>
+<div *ngIf="!loader" class="search-results" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50"
+    (scrolled)="onScroll()">
+    <user *ngFor="let user of users" [user]="user"></user>
+
+</div>
